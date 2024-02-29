@@ -12,7 +12,6 @@ body {
     font-size: 25px;
     padding: 0px;
     width: 100%;
-    height: 180vh;
     background-color: rgb(253, 255, 155) ;
       
     .wrapper {
@@ -20,65 +19,61 @@ body {
         justify-content: space-between;
         align-items: center;
         font-size: 20px;
-        padding: 15px;
+        padding: 0px;
         width: 100%;
-        height: 80px;
         background-color: rgb(252, 252, 116);
+        border-bottom: 2px solid black;
         box-shadow: black;
         
+    }    
         
-        .brand {
-            display: flex;
-            
-        }
 
         .logo {
             list-style-type: none;
-        }
-
-        .logo > img {
+            padding: 16px 24px;
             width: 50px;
             height: 50px;
             border-radius: 50px;
         }
 
-        .logo > img:hover {
+        .logo:hover {
             width: 70px;
             height: 70px;
             border-radius: 70px;
             transition: all .3s ease-in-out;
         }
   
-        .navigation {
+        .menu {
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 15px 24px;
         }
 
-        .navigation > li {
-            list-style-type: none;
-            padding: 10px;
-        }
-
-        .navigation > li > a:hover{
+        .menu > button > a:hover{
             color: crimson;
-            background-color: aqua;
+            background-color: gold;
+            background-size: auto;
             transition: all .3s ease-in-out;
         }
-        .navigation > li > a {
+
+        .menu  > button > a {
             color:black;
-            background-color: lightgrey;
-            padding: 10px;
+            padding: 5px;
             font-size: 20px;
             text-decoration: none;
             text-transform: capitalize;
+            border: 1px ;
+            cursor: pointer;
+            transition: 0,3s background-color ease-in-out;
         }
     }
 
     .sambutan {
         display: flex;
         flex-direction: column;
-        padding: 30px;
+        padding: 10px;
+        
     }
         
     .sambutan > h3 {
@@ -93,30 +88,31 @@ body {
         font-weight: 50;
     }
 
-    .sambutan > video  {
-        display: flex;
-        flex-direction: column;
-        padding: 30px;
-        padding-top: 100px;
-        width: 1366px;
-        height: 578px;
-        
+    .vdo-slideshow  {
+        padding: 0px;
+        padding-top: 15px;
+        padding-right: 15px;
+        width: 100%;
+        height: 50%;  
     }
 
     .our {
         display: flex;
         flex-direction: column;
-        padding: 30px;
+        padding: 0px;
         width: 100%;
         height: 300px;
         background-color: gold;
-        box-shadow: black;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        box-shadow:  black;
     }
 
     .our > h3 {
         font-family: 'Times New Roman', Times, serif;
         font-size: 15px;
         font-weight: 1000;
+        padding: 5px;
     }
 
     .lokasi {
@@ -128,6 +124,8 @@ body {
     }
 
     img {
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
     }
 
@@ -135,9 +133,36 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: larger;
+        font-size: 20px;
         color: black;
         text-decoration: none;
     }
+
+    .form-massage {
+        display: flex;
+        justify-content: left space-around;
+        align-items: center;
+        font-size: 20px;
+
+    }
+
+    @media only screen  and (max-width: 600px) {
+        .wrapper {
+        flex-direction: column;
+        }
+
+        .menu {
+            width: 100%;
+            flex-direction: column;
+        }  
+
+        .logo {
+            margin-bottom: 14px;
+        }
+       
+        .form-massage {
+            flex-direction: column;
+        }
+        
 
 }
